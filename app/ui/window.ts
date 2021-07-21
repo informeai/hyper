@@ -112,7 +112,7 @@ export function newWindow(
     fetchNotifications(window);
     // auto updates
     if (!isDev) {
-      updater(window);
+     // updater(window);
     } else {
       console.log('ignoring auto updates during dev');
     }
