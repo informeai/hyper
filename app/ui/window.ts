@@ -111,11 +111,11 @@ export function newWindow(
     app.windowCallback = undefined;
     fetchNotifications(window);
     // auto updates
-    if (!isDev) {
-//updater(window);
-    } else {
-      console.log('ignoring auto updates during dev');
-    }
+//    if (!isDev) {
+//	  updater(window);
+//    } else {
+//      console.log('ignoring auto updates during dev');
+//    }
   });
 
   function createSession(extraOptions: any = {}) {
