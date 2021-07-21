@@ -1,6 +1,6 @@
 // Packages
 import electron, {app, BrowserWindow, AutoUpdater} from 'electron';
-import ms from 'ms';
+//import ms from 'ms';
 import retry from 'async-retry';
 
 // Utilities
@@ -44,7 +44,7 @@ async function init() {
     canaryUpdates = true;
   }
 
-  const feedURL = buildFeedUrl(canaryUpdates, version);
+  //const feedURL = buildFeedUrl(canaryUpdates, version);
 
 //  autoUpdater.setFeedURL({url: feedURL});
 
@@ -91,7 +91,7 @@ export default (win: BrowserWindow) => {
     const newUpdateIsCanary = isCanary(updateChannel);
 
     if (newUpdateIsCanary !== canaryUpdates) {
-      const feedURL = buildFeedUrl(newUpdateIsCanary, version);
+    //  const feedURL = buildFeedUrl(newUpdateIsCanary, version);
 
      // autoUpdater.setFeedURL({url: feedURL});
      // autoUpdater.checkForUpdates();
