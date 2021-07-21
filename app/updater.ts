@@ -18,16 +18,16 @@
 //let canaryUpdates = false;
 
 //const buildFeedUrl = (canary: boolean, currentVersion: string) => {
- // const updatePrefix = canary ? 'releases-canary' : 'releases';
- // return `https://${updatePrefix}.hyper.is/update/${isLinux ? 'deb' : platform}/${currentVersion}`;
+// const updatePrefix = canary ? 'releases-canary' : 'releases';
+// return `https://${updatePrefix}.hyper.is/update/${isLinux ? 'deb' : platform}/${currentVersion}`;
 //};
 
 //const isCanary = (updateChannel: string) => updateChannel === 'canary';
 
 //async function init() {
-  //autoUpdater.on('error', (err) => {
-   // console.error('Error fetching updates', `${err.message} (${err.stack})`);
- // });
+//autoUpdater.on('error', (err) => {
+// console.error('Error fetching updates', `${err.message} (${err.stack})`);
+// });
 
 //  const config = await retry(() => {
 //    const content = getDecoratedConfig();
@@ -39,12 +39,12 @@
 //    return content;
 //  });
 
-  // If defined in the config, switch to the "canary" channel
+// If defined in the config, switch to the "canary" channel
 //  if (config.updateChannel && isCanary(config.updateChannel)) {
 //    canaryUpdates = true;
 //  }
 
-  //const feedURL = buildFeedUrl(canaryUpdates, version);
+//const feedURL = buildFeedUrl(canaryUpdates, version);
 
 //  autoUpdater.setFeedURL({url: feedURL});
 
@@ -83,7 +83,7 @@
 //  autoUpdater.on(eventName, onupdate);
 
 //  rpc.once('quit and install', () => {
-   // autoUpdater.quitAndInstall();
+// autoUpdater.quitAndInstall();
 //  });
 
 //  app.config.subscribe(() => {
@@ -91,12 +91,12 @@
 //    const newUpdateIsCanary = isCanary(updateChannel);
 
 //    if (newUpdateIsCanary !== canaryUpdates) {
-    //  const feedURL = buildFeedUrl(newUpdateIsCanary, version);
+//  const feedURL = buildFeedUrl(newUpdateIsCanary, version);
 
-     // autoUpdater.setFeedURL({url: feedURL});
-     // autoUpdater.checkForUpdates();
+// autoUpdater.setFeedURL({url: feedURL});
+// autoUpdater.checkForUpdates();
 
-      //canaryUpdates = newUpdateIsCanary;
+//canaryUpdates = newUpdateIsCanary;
 //    }
 //  });
 
