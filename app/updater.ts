@@ -46,15 +46,15 @@ async function init() {
 
   const feedURL = buildFeedUrl(canaryUpdates, version);
 
-  autoUpdater.setFeedURL({url: feedURL});
+//  autoUpdater.setFeedURL({url: feedURL});
 
-  setTimeout(() => {
-    autoUpdater.checkForUpdates();
-  }, ms('10s'));
+//  setTimeout(() => {
+//    autoUpdater.checkForUpdates();
+//  }, ms('10s'));
 
-  setInterval(() => {
-    autoUpdater.checkForUpdates();
-  }, ms('30m'));
+//  setInterval(() => {
+//    autoUpdater.checkForUpdates();
+//  }, ms('30m'));
 
   isInit = true;
 }
@@ -83,7 +83,7 @@ export default (win: BrowserWindow) => {
   autoUpdater.on(eventName, onupdate);
 
   rpc.once('quit and install', () => {
-    autoUpdater.quitAndInstall();
+   // autoUpdater.quitAndInstall();
   });
 
   app.config.subscribe(() => {
@@ -93,10 +93,10 @@ export default (win: BrowserWindow) => {
     if (newUpdateIsCanary !== canaryUpdates) {
       const feedURL = buildFeedUrl(newUpdateIsCanary, version);
 
-      autoUpdater.setFeedURL({url: feedURL});
-      autoUpdater.checkForUpdates();
+     // autoUpdater.setFeedURL({url: feedURL});
+     // autoUpdater.checkForUpdates();
 
-      canaryUpdates = newUpdateIsCanary;
+      //canaryUpdates = newUpdateIsCanary;
     }
   });
 
