@@ -4,7 +4,7 @@ import electron, {app, BrowserWindow, AutoUpdater} from 'electron';
 import retry from 'async-retry';
 
 // Utilities
-import {version} from './package.json';
+//import {version} from './package.json';
 import {getDecoratedConfig} from './plugins';
 import autoUpdaterLinux from './auto-updater-linux';
 
@@ -17,10 +17,10 @@ let isInit = false;
 // Default to the "stable" update channel
 let canaryUpdates = false;
 
-const buildFeedUrl = (canary: boolean, currentVersion: string) => {
-  const updatePrefix = canary ? 'releases-canary' : 'releases';
-  return `https://${updatePrefix}.hyper.is/update/${isLinux ? 'deb' : platform}/${currentVersion}`;
-};
+//const buildFeedUrl = (canary: boolean, currentVersion: string) => {
+ // const updatePrefix = canary ? 'releases-canary' : 'releases';
+ // return `https://${updatePrefix}.hyper.is/update/${isLinux ? 'deb' : platform}/${currentVersion}`;
+//};
 
 const isCanary = (updateChannel: string) => updateChannel === 'canary';
 
