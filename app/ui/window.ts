@@ -4,7 +4,7 @@ import {parse as parseUrl} from 'url';
 import {v4 as uuidv4} from 'uuid';
 import fileUriToPath from 'file-uri-to-path';
 import isDev from 'electron-is-dev';
-import updater from '../updater';
+//import updater from '../updater';
 import toElectronBackgroundColor from '../utils/to-electron-background-color';
 import {icon, homeDirectory} from '../config/paths';
 import createRPC from '../rpc';
@@ -112,7 +112,7 @@ export function newWindow(
     fetchNotifications(window);
     // auto updates
     if (!isDev) {
-    // updater(window);
+// updater(window);
     } else {
       console.log('ignoring auto updates during dev');
     }
